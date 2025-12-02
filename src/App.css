@@ -1,0 +1,60 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+.navbar-brand .logo {
+  max-width: 150px;
+}
+.login-page {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.login-page .form-label {
+  width: 100%;
+  text-align: left;
+}
+.login-page .invalid-feedback, .register-page .invalid-feedback {
+  display: block;
+  text-align: left;
+}
+.login-icon {
+  margin-right: 15px;
+}
+.login-icon .rounded-circle {
+  margin-left: 10px;
+}
+.logo {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.data-list .img-fluid {
+  width: 100%;
+}
+#data-list-hide {
+  display: none;
+}
+.btn-primary {
+  background-color: #f9ca3b;
+  border-color: #000;
+}
+.btn-outline-primary {
+  border-color: #f9ca3b;
+  color: #f9ca3b;
+}
+.error-hide {
+  display: none;
+}
+
+footer {
+    width: 100%;
+    padding: 20px;
+    background: #f8f9fa;
+}
+footer p {
+  margin: 0;
+}
