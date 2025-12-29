@@ -13,6 +13,7 @@ const ForgotPassword = () => {
     const [tryMsg, setTryMsg] = useState(false);
 
     const [emailValidate, setEmailValidate] = useState(false);
+    const backendPath = import.meta.env.VITE_BACKEND_URL;
     
     const registerData = {
         email: email
@@ -21,7 +22,7 @@ const ForgotPassword = () => {
     const forgotSubmit = (event) => {
         event.preventDefault();
         if (emailRegex.test(email)) {
-            axios.post('http://localhost:5000/forgotPassword', registerData)
+            axios.post(`${backendPath}/forgotPassword`, registerData)
             .then(response => {
                 console.log('forgotSubmit : ', response.data)
                 if(response.data.status == 'ok'){

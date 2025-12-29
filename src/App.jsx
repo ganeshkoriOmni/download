@@ -15,11 +15,11 @@ import Softwares from './Pages/Softwares';
 import Documents from './Pages/Documents';
 
 function App() {
-  const user = useContext(UserContext)
+  const user = useContext(UserContext);
+  console.log(import.meta.env)
 
   return (
     <>
-      
       <BrowserRouter>
         {/* <Header /> */}
         <Routes>

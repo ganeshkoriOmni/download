@@ -4,15 +4,14 @@ import Header from '../Components/header';
 import documentImg from '../assets/document.jpg';
 import Footer from '../Components/Footer';
 
-const apiKey = import.meta.env.REACT_APP_API_KEY;
-    const serverUrl = import.meta.env.REACT_APP_API_KEY
 const Documents = () => {
 
     const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
-  const backendPath = 'http://localhost:5000';
+  const backendPath = import.meta.env.VITE_BACKEND_URL;
+  //const backendPath = 'http://localhost:5000';
 
   useEffect(() => {
     axios.get(`${backendPath}/documents`)
@@ -25,8 +24,6 @@ const Documents = () => {
         setLoading(false);
       });
       
-
-    console.log('xxx', serverUrl)
   }, []);
 
     const searchFilter = (event) => {

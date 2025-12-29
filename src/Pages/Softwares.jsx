@@ -11,7 +11,8 @@ const Softwares = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
-  const backendPath = 'http://localhost:5000';
+  const backendPath = import.meta.env.VITE_BACKEND_URL;
+  //const backendPath = 'http://localhost:5000';
 
   useEffect(() => {
     axios.get(`${backendPath}/softwares`)

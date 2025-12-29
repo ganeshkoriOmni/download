@@ -19,6 +19,7 @@ const Register = () => {
     const [emailValidate, setEmailValidate] = useState(false);
     const [passwordValidate, setPasswordValidate] = useState(false);
     const [data, setData] = useState();
+    const backendPath = import.meta.env.VITE_BACKEND_URL;
     
     const registerData = {
         fname: fname,
@@ -30,7 +31,7 @@ const Register = () => {
     const registerSubmit = (event) => {
         event.preventDefault();
         if (emailRegex.test(email) && password && fname && lname) {
-            axios.post('http://localhost:5000/register', registerData)
+            axios.post(`${backendPath}/register`, registerData)
             .then(response => {
                 console.log('data', response.data)
                 if(response.data.status == 'ok'){
