@@ -15,6 +15,7 @@ const LoginPage = () => {
     const [passwordValidate, setPasswordValidate] = useState(false);
     const [data, setData] = useState();
     const [error, setError] = useState();
+    const backendPath = import.meta.env.VITE_BACKEND_URL;
     
     const loginData = {
         email: email,
@@ -24,7 +25,7 @@ const LoginPage = () => {
     const loginSubmit = (event) => {
         event.preventDefault();
         if (emailRegex.test(email) && password) {
-            axios.post('http://localhost:5000/login', loginData)
+            axios.post(`${backendPath}/login`, loginData)
             .then(response => {
                 if(response.data.email){
                     sessionStorage.setItem('loginID', response.data._id);

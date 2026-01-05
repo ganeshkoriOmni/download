@@ -16,6 +16,7 @@ const ChangePassword = () => {
     const [passwordConfirmValidate, setPasswordConfirmValidate] = useState(false);
     const [data, setData] = useState();
     const [error, setError] = useState();
+    const backendPath = import.meta.env.VITE_BACKEND_URL;
     
     const loginData = {
         email: email,
@@ -25,7 +26,7 @@ const ChangePassword = () => {
     const changeSubmit = (event) => {
         event.preventDefault();
         if (emailRegex.test(email) && password) {
-            axios.post('http://localhost:5000/changePassword', loginData)
+            axios.post(`${backendPath}/changePassword`, loginData)
             .then(response => {
                 if(response.data.email){
                     navigate('/login');
