@@ -2,7 +2,6 @@ import { useState, useContext } from 'react'
 
 import './App.css'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import logo from './assets/OmniLogo.png';
 
 import { UserContext } from './Contexts/UserContext'
 import LoginPage from './Pages/Login'
@@ -10,7 +9,6 @@ import Dashboard from './Pages/Dashboard';
 import Register from './Pages/Register';
 import Hybris from './Pages/Hybris';
 import ForgotPassword from './Pages/ForgotPassword';
-import Header from './Components/header';
 import Softwares from './Pages/Softwares';
 import Documents from './Pages/Documents';
 
